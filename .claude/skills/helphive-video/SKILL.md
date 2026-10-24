@@ -64,3 +64,9 @@ Apply this to every HelpHive video. The goal is a polished creator brand — cin
 - Fonts: DM Sans and Playfair Display from Google Fonts; load them in the HyperFrames HTML.
 - Keep the original footage untouched; put working files and renders in the session scratchpad, not the repo (videos are large and the repo is the public website).
 - Sound effects (bell, pop) must be royalty-free or synthesized; keep them soft, under the voice.
+
+## Lessons from past edits
+- In cloud sessions, CDNs and model hosts may be blocked. What worked: fonts from npm (`@fontsource/dm-sans`, `@fontsource/playfair-display`) copied into `assets/fonts/` with `@font-face`; GSAP copied from the `gsap` npm package into `assets/`; render with `HYPERFRAMES_BROWSER_PATH` pointed at the pre-installed Chromium headless shell. Whisper models need `huggingface.co` allowed in the environment's network settings.
+- If footage has no speech (Live Photos, b-roll), ask the user for their words (a sentence or voice memo) before writing any text. Spread their sentence across the Reel: hook, then pill, then payoff.
+- Before placing text, check every shot for faces in the top third. If a shot has faces there, reorder the shots so text only lands where nobody is covered.
+- Before posting, flag consent for any identifiable children, officers, or bystanders.
